@@ -1,0 +1,28 @@
+<div>
+	<ul>
+		{{#each burgers}}
+			<form action="/burgers/{{this.id}}/update?method=PUT" method="POST">
+				<p><span class="label"></span> {{this.burger_name}}</p>
+				<button type="submit">Devour!</button>
+			</form>
+		{{/each}}
+	</ul>
+</div>
+
+<div>
+	<h1>Burgers Eaten:</h1>
+	<ul>
+		{{#each eaten}}
+			<form>
+				<p><span class="label"></span> {{this.burger_name}}</p>
+			</form>
+		{{/each}}
+	</ul>
+
+</div>
+
+<div>
+	<input type="text" name="burgerName" value="">
+	<input type="submit" value="Submit">
+	<p>Enter a burger you want to eat then click the "Submit" button.</p>
+</div>
